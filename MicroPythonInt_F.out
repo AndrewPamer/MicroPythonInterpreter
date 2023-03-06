@@ -1,0 +1,232 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2022.12.15 15:48:03 =~=~=~=~=~=~=~=~=~=~=~=
+javac AbstractSyntaxTreeInt.java 
+]0;ajp0317@cell06-cse: ~/CSCE4430/Assign7 ajp0317@cell06-cse:~/CSCE4430/Assign7$ javac MicroPythonInt_F.java 
+]0;ajp0317@cell06-cse: ~/CSCE4430/Assign7 ajp0317@cell06-cse:~/CSCE4430/Assign7$ java MicroPythonInt_F test1.py
+Source Program
+--------------
+# test1.py
+
+# This program tests basic arithmetic and the while loop.
+
+from MicroPythonListClass import MicroPythonList
+
+def main () -> int :
+  x = int (input ())
+  y = int (input ())
+  q = 0  
+  r = x
+  while r >= y :
+    q = q + 1
+    r = r - y;
+  print (q)
+  print (r)
+  return 0
+32
+6
+5
+2
+]0;ajp0317@cell06-cse: ~/CSCE4430/Assign7 ajp0317@cell06-cse:~/CSCE4430/Assign7$ java MicroPythonInt_F test1.py
+Source Program
+--------------
+# test1.py
+
+# This program tests basic arithmetic and the while loop.
+
+from MicroPythonListClass import MicroPythonList
+
+def main () -> int :
+  x = int (input ())
+  y = int (input ())
+  q = 0  
+  r = x
+  while r >= y :
+    q = q + 1
+    r = r - y;
+  print (q)
+  print (r)
+  return 0
+100
+5
+20
+0
+]0;ajp0317@cell06-cse: ~/CSCE4430/Assign7 ajp0317@cell06-cse:~/CSCE4430/Assign7$ java MicroPythonInt_F test2.py
+Source Program
+--------------
+# test2.py 
+
+# This program tests list manipulation operators.
+
+from MicroPythonListClass import MicroPythonList
+
+def main () -> int :
+  myList0 = MicroPythonList ()
+  myList1 = myList0 . cons (7)
+  myList2 = myList1 . cons (5)
+  myList3 = myList2 . cons (3)
+  result = (12 * 3 + 5) + myList3 . tail () . head ()
+  print (result)
+  return 0
+46
+]0;ajp0317@cell06-cse: ~/CSCE4430/Assign7 ajp0317@cell06-cse:~/CSCE4430/Assign7$ java MicroPythonInt_F test3.py
+Source Program
+--------------
+# test3.py
+
+# This program tests list comparison operations.
+
+from MicroPythonListClass import MicroPythonList
+
+def main () -> int :
+  my_list0 = MicroPythonList ()
+  my_list1 = my_list0 . cons (46)
+  my_list2 = my_list1 . cons (578)
+  my_list3 = my_list2 . cons (405)
+  my_list4 = my_list3 . cons (918)
+  my_list5 = my_list4 . cons (47)
+  my_list6 = my_list5 . cons (198)
+  my_list  = my_list6 . cons (14)
+  print (my_list)
+  target = 405
+  position = 0
+  while not my_list . null () and my_list . head () != target :
+    my_list = my_list . tail ()
+    position = position + 1;
+  if my_list . null () :
+    print (-1);
+  else :
+    print (position);
+  return 0
+
+[14, 198, 47, 918, 405, 578, 46]
+4
+]0;ajp0317@cell06-cse: ~/CSCE4430/Assign7 ajp0317@cell06-cse:~/CSCE4430/Assign7$ java MicroPythonInt_F test4.py
+Source Program
+--------------
+# test4.py
+
+# This program tests non-recursive functions.
+
+from MicroPythonListClass import MicroPythonList
+
+def area (h : int, x : int, y : int) -> int :
+  z = 2 * (x * y + (x * h) + y * h)
+  return z
+
+def main () -> int :
+  a = int (input ())
+  b = int (input ())
+  h = int (input ())
+  s = area (h, a, b)
+  print (s)
+  return 0
+5
+3
+6
+126
+]0;ajp0317@cell06-cse: ~/CSCE4430/Assign7 ajp0317@cell06-cse:~/CSCE4430/Assign7$ java MicroPythonInt_F test4.py
+Source Program
+--------------
+# test4.py
+
+# This program tests non-recursive functions.
+
+from MicroPythonListClass import MicroPythonList
+
+def area (h : int, x : int, y : int) -> int :
+  z = 2 * (x * y + (x * h) + y * h)
+  return z
+
+def main () -> int :
+  a = int (input ())
+  b = int (input ())
+  h = int (input ())
+  s = area (h, a, b)
+  print (s)
+  return 0
+100
+100
+100
+60000
+]0;ajp0317@cell06-cse: ~/CSCE4430/Assign7 ajp0317@cell06-cse:~/CSCE4430/Assign7$ java MicroPythonInt_F test5.py
+Source Program
+--------------
+# test5.py
+
+# This program tests recursive functions.
+
+from MicroPythonListClass import MicroPythonList
+
+def facto (x : int) -> int :
+  if x == 1 :
+    s = 1;
+  else :
+    s = x * facto (x - 1);
+  return s
+
+def main () -> int :
+  print (facto (int (input ())))
+  return 0
+9
+362880
+]0;ajp0317@cell06-cse: ~/CSCE4430/Assign7 ajp0317@cell06-cse:~/CSCE4430/Assign7$ java MicroPythonInt_F test5.py
+Source Program
+--------------
+# test5.py
+
+# This program tests recursive functions.
+
+from MicroPythonListClass import MicroPythonList
+
+def facto (x : int) -> int :
+  if x == 1 :
+    s = 1;
+  else :
+    s = x * facto (x - 1);
+  return s
+
+def main () -> int :
+  print (facto (int (input ())))
+  return 0
+4
+24
+]0;ajp0317@cell06-cse: ~/CSCE4430/Assign7 ajp0317@cell06-cse:~/CSCE4430/Assign7$ java MicroPythonInt_F test6.py
+Source Program
+--------------
+# test6.py
+
+# This program tests recursive functions on lists.
+
+from MicroPythonListClass import MicroPythonList
+
+def cons_my_list (r : int, my_list : MicroPythonList) -> MicroPythonList :
+  if r <= 10 :
+    my_list = my_list . cons (r)
+    my_list = cons_my_list (r + 1, my_list);
+  return my_list
+
+def main () -> int :
+  print (cons_my_list (int (input ()), MicroPythonList ()))
+  return 0
+6
+[10, 9, 8, 7, 6]
+]0;ajp0317@cell06-cse: ~/CSCE4430/Assign7 ajp0317@cell06-cse:~/CSCE4430/Assign7$ java MicroPythonInt_F test6.py
+Source Program
+--------------
+# test6.py
+
+# This program tests recursive functions on lists.
+
+from MicroPythonListClass import MicroPythonList
+
+def cons_my_list (r : int, my_list : MicroPythonList) -> MicroPythonList :
+  if r <= 10 :
+    my_list = my_list . cons (r)
+    my_list = cons_my_list (r + 1, my_list);
+  return my_list
+
+def main () -> int :
+  print (cons_my_list (int (input ()), MicroPythonList ()))
+  return 0
+8
+[10, 9, 8]
+]0;ajp0317@cell06-cse: ~/CSCE4430/Assign7 ajp0317@cell06-cse:~/CSCE4430/Assign7$ 
